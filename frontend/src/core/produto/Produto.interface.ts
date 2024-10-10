@@ -1,6 +1,7 @@
-import Especifications from "./Especificacoes.interface"
+import Especificacoes from "./Especificacoes.interface"
+import Precificavel from "./Precificavel.interface"
 
-export default interface Produto {
+export default interface Produto extends Precificavel {
   id: number
   nome: string
   descricao: string
@@ -10,5 +11,5 @@ export default interface Produto {
   nota: number
   videoReview: string
   tags: string[]
-  especifications: Especifications
+  especificacoes: Especificacoes
 }

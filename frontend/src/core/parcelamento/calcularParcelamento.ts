@@ -10,8 +10,8 @@ export default class CalcularParcelamento {
     if (qtdeParcelas < 2 || qtdeParcelas > QTDE_MAX_PARCELAS) {
       throw new Error(
         `Quantidade de parcelas deve ser entre 2 e ${QTDE_MAX_PARCELAS}`,
-       )
-  }
+      )
+    }
 
     const totalComJuros = this.calcularJurosCompostos(
       valor,

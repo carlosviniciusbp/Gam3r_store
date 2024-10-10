@@ -1,5 +1,5 @@
-import { QTDE_MAX_PARCELAS, TAXA_JUROS_MENSAL } from "../constants"
-import Parcelamento from "./Parcelamento.interface"
+import { QTDE_MAX_PARCELAS, TAXA_JUROS_MENSAL } from "../constants";
+import Parcelamento from "./Parcelamento.interface";
 
 export default class CalcularParcelamento {
   executar(
@@ -10,21 +10,21 @@ export default class CalcularParcelamento {
     if (qtdeParcelas < 2 || qtdeParcelas > QTDE_MAX_PARCELAS) {
       throw new Error(
         `Quantidade de parcelas deve ser entre 2 e ${QTDE_MAX_PARCELAS}`,
-       )
-  }
+      );
+    }
 
     const totalComJuros = this.calcularJurosCompostos(
       valor,
       taxaJuros,
       qtdeParcelas,
-    )
+    );
 
     return {
       valorParcela: this.comDuasCasasDecimais(totalComJuros / qtdeParcelas),
       valorTotal: this.comDuasCasasDecimais(totalComJuros),
       qtdeParcelas,
       taxaJuros,
-    }
+    };
   }
 
   private calcularJurosCompostos(
@@ -32,10 +32,10 @@ export default class CalcularParcelamento {
     taxaMensal: number,
     qtdeParcelas: number,
   ) {
-    return valorTotal * Math.pow(1 + taxaMensal, qtdeParcelas)
+    return valorTotal * Math.pow(1 + taxaMensal, qtdeParcelas);
   }
 
   private comDuasCasasDecimais(valor: number): number {
-    return Math.round(valor * 100) / 100
+    return Math.round(valor * 100) / 100;
   }
 }

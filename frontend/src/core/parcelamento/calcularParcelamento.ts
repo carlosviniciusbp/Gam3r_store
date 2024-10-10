@@ -11,7 +11,7 @@ export default class CalcularParcelamento {
       throw new Error(
         `Quantidade de parcelas deve ser entre 2 e ${QTDE_MAX_PARCELAS}`,
       )
-  }
+    }
 
     const totalComJuros = this.calcularJurosCompostos(
       valor,

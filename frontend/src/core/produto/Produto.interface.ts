@@ -1,6 +1,6 @@
-import Especifications from "./Specifications";
+import Especifications from "./Especificacoes.interface";
 
-export default interface Product {
+export default interface Produto {
   id: number;
   nome: string;
   descricao: string;

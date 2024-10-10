@@ -1,5 +1,3 @@
 export default function Home() {
-  return (
-    <div>Aplicação</div>
-  );
+  return <div>Aplicação</div>;
 }

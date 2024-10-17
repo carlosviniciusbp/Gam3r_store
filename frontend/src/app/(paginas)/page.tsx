@@ -3,7 +3,7 @@ import { produtos } from "@/core"
 
 export default function Home() {
   return (
-    <div className="container grid grid-cols-4">
+    <div className="container flex flex-col gap-5 py-10">
       {produtos.map((produto) => (
         <ProdutoItem key={produto.id} produto={produto} />
       ))}

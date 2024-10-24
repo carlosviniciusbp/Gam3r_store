@@ -1,4 +1,4 @@
-import { Produto } from "@/core"
+import { Produto } from "@gstore/core"
 
 export interface TituloProdutoProps {
   produto: Produto

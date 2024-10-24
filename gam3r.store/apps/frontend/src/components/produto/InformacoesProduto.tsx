@@ -1,4 +1,4 @@
-import { Produto } from "@/core"
+import { Produto } from "@gstore/core"
 import Image from "next/image"
 import Especificacoes from "./Especificacoes"
 

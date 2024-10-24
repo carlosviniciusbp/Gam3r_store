@@ -2,7 +2,7 @@ import BannerCompra from "@/components/produto/BannerCompra"
 import InformacoesProduto from "@/components/produto/InformacoesProduto"
 import ProdutoNaoEncontrado from "@/components/produto/ProdutoNaoEncontrado"
 import TituloProduto from "@/components/produto/TituloProduto"
-import { produtos } from "@/core"
+import { produtos } from "@gstore/core"
 
 export default function PaginaProduto(props: any) {
   const id = +props.params.id

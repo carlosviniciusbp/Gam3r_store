@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common'
 import { PrismaProvider } from 'src/db/prisma.provider'
 
 @Injectable()
-export class ProdutoPrismaTs {
+export class ProdutoPrisma {
   constructor(readonly prisma: PrismaProvider) {}
 
   async salvar(produto: Produto): Promise<void> {

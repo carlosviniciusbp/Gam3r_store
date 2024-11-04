@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres-compose:
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER} # Nome do usuário do banco
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # Senha do usuário
+      POSTGRES_DB: ${POSTGRES_DB} # Nome do banco de dados
+    ports:
+      - '5432:5432'
+      
+# Comandos docker
+# Rodar banco -> docker-compose up -d
+# Confirmar se está rodando -> docker ps
+# Parar e remover container -> docker-compose down
+# tirar formatação do terminal psql -> \pset pager off

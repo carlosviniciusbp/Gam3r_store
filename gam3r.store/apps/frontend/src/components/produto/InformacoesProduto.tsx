@@ -15,7 +15,7 @@ export default function InformacoesProduto(props: InformacoesProdutoProps) {
           src={produto.imagem!}
           fill
           className="object-cover p-7"
-          alt="Imagem do Produto"   
+          alt="Imagem do Produto"
         />
       </div>
       <Especificacoes produto={produto!} />

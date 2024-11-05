@@ -31,6 +31,48 @@ model Produto {
   precoMedio       Float
 
   especificacoes Json 
+
+  itens  ItemPedido[]
+
+  @@map("produtos")
+}
+
+model Pedido {
+  id             Int      @id @default(autoincrement())
+  data           DateTime
+  valorTotal     Float
+  status         String
+  formaPagamento String
+
+  entrega   PedidoEntrega @relation(fields: [entregaId], references: [id])
+  entregaId Int           @unique
+
+  itens ItemPedido[]
+}
+
+model ItemPedido {
+  id            Int   @id @default(autoincrement())
+  quantidade    Int
+  precoUnitario Float
+
+  pedido   Pedido @relation(fields: [pedidoId], references: [id])
+  pedidoId Int
+
+  produto   Produto @relation(fields: [produtoId], references: [id])
+  produtoId Int
+}
+
+model PedidoEntrega {
+  id          Int    @id @default(autoincrement())
+  nome        String
+  email       String
+  cpf         String
+  logradouro  String
+  complemento String
+  cidade      String
+  estado      String
+
+  pedido Pedido?
 }
 
 

@@ -1,3 +1,4 @@
+export * from './carrinho'
 export * from './constants'
 export * from './pedido'
 export * from './produto'

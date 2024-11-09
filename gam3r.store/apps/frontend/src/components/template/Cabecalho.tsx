@@ -1,3 +1,4 @@
+'use client'
 import Logo from '../shared/Logo'
 import IconeCarrinho from '../shared/IconeCarrinho'
 import Link from 'next/link'
